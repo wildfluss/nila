@@ -18,7 +18,8 @@ def slider_callback():
     axes.plot_surface(plot1, plot2, plot3)
     # plot.show ()
     st.pyplot(fig)
-age = st.slider("Param?", 0, 4, 2,
+age = st.slider("Param?", 0.0, 4.0, 2.0,
                 on_change=slider_callback,
-                key='param')
+                key='param',
+                step=0.25)
 st.write("I'm ", age, "years old")
